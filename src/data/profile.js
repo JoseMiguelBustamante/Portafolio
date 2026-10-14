@@ -10,7 +10,7 @@ export const profile = {
   photo: null,
   links: {
     github: "https://github.com/JoseMiguelBustamante",
-    linkedin: null,
+    linkedin: "https://www.linkedin.com/in/jose-miguel-bustamante-condori",
     email: null,
     cv: null,
   },
