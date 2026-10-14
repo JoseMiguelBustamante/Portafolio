@@ -28,7 +28,7 @@ Out of scope for this feature: final copy, real project data, custom domain, i18
 - [x] T1 Scaffold Vite + React + Tailwind v4 (manual files, keep existing `.gitignore`). Check: `npm run build` passes. Evidence: build OK (vite 8.3.4, 16 modules), built CSS contains `neutral-950`.
 - [x] T2 Add Vitest + RTL with a smoke test for `App` (observed RED, then GREEN). Check: `npm test` passes. Evidence: RED `ReferenceError: document is not defined`; GREEN after jsdom + setup file (1 test passed); build still OK. No refactor needed.
 - [x] T3 Add `netlify.toml` (build `npm run build`, publish `dist`, SPA redirect). Check: file matches netlify-frameworks guide (Vite section). Evidence: build/publish/redirect values identical to the guide; not yet validated by a real Netlify build (T6).
-- [ ] T4 Dark theme base and page layout with section skeletons: Presentation, Education, Projects, Skills, Achievements, Contact. Check: tests per section, build passes.
+- [x] T4 Dark theme base and page layout with section skeletons: Presentation, Education, Projects, Skills, Achievements, Contact. Check: tests per section, build passes. Evidence: RED (missing components, App without nav/regions); GREEN 10 tests in 3 files; build OK; screenshot on dev server shows dark minimal layout with sticky nav and hero. Not checked: mobile viewport, keyboard navigation by hand. Placeholder content: name derived from GitHub username, role "Desarrollador de software", "Próximamente" texts; no email published on purpose.
 - [ ] T5 Content data module (`src/data/`) with placeholder entries, sections render from data. Check: tests, build passes.
 - [ ] T6 Connect repo to Netlify (user login required) and verify the first deploy.
 
@@ -38,7 +38,7 @@ Out of scope for this feature: final copy, real project data, custom domain, i18
 - Pushing to `main` deploys on Netlify.
 
 ## Progress
-Started 2026-10-13. T1, T2, T3 done (committed locally, not pushed).
+Started 2026-10-13. T1-T4 done (committed locally, not pushed).
 
 ## Next step
-T4.
+T5. Needs real content from the user (name confirmation, role, education, projects, skills, achievements).
