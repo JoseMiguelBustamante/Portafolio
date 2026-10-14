@@ -1,7 +1,26 @@
+import Header from "./components/Header.jsx";
+import Hero from "./sections/Hero.jsx";
+import Education from "./sections/Education.jsx";
+import Projects from "./sections/Projects.jsx";
+import Skills from "./sections/Skills.jsx";
+import Achievements from "./sections/Achievements.jsx";
+import Contact from "./sections/Contact.jsx";
+
 export default function App() {
   return (
-    <main className="min-h-screen bg-neutral-950 text-neutral-100">
-      <h1 className="p-8 text-2xl font-semibold">Portafolio</h1>
-    </main>
+    <>
+      <Header />
+      <main className="mx-auto max-w-3xl px-6">
+        <Hero />
+        <Education />
+        <Projects />
+        <Skills />
+        <Achievements />
+        <Contact />
+      </main>
+      <footer className="mx-auto max-w-3xl px-6 py-10 text-sm text-neutral-600">
+        © {new Date().getFullYear()} Jose Miguel Bustamante
+      </footer>
+    </>
   );
 }
