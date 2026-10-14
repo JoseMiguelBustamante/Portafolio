@@ -18,4 +18,23 @@ describe("Header", () => {
       ["Contacto", "#contacto"],
     ]);
   });
+
+  it("renders an initials logo that links back to the top", () => {
+    render(<Header />);
+
+    const logo = screen.getByRole("link", { name: "Ir al inicio" });
+
+    expect(logo).toHaveAttribute("href", "#presentacion");
+    expect(logo).toHaveTextContent("JM");
+  });
+
+  it("keeps the logo outside the navigation landmark", () => {
+    render(<Header />);
+
+    const nav = screen.getByRole("navigation", { name: "Navegación principal" });
+
+    expect(
+      within(nav).queryByRole("link", { name: "Ir al inicio" }),
+    ).not.toBeInTheDocument();
+  });
 });

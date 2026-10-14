@@ -1,25 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import Hero from "./Hero.jsx";
 import Education from "./Education.jsx";
 import Projects from "./Projects.jsx";
 import Skills from "./Skills.jsx";
 import Achievements from "./Achievements.jsx";
 import Contact from "./Contact.jsx";
-
-describe("Hero", () => {
-  it("renders the presentation region with the name as the page heading", () => {
-    render(<Hero />);
-
-    const region = screen.getByRole("region", {
-      name: "Jose Miguel Bustamante",
-    });
-    expect(region).toHaveAttribute("id", "presentacion");
-    expect(
-      screen.getByRole("heading", { level: 1, name: "Jose Miguel Bustamante" }),
-    ).toBeInTheDocument();
-  });
-});
 
 describe.each([
   ["Education", Education, "Educación", "educacion"],

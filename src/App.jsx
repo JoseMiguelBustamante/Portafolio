@@ -18,7 +18,7 @@ export default function App() {
         <Achievements />
         <Contact />
       </main>
-      <footer className="mx-auto max-w-3xl px-6 py-10 text-sm text-neutral-600">
+      <footer className="mx-auto max-w-3xl px-6 py-10 text-sm text-slate-600">
         © {new Date().getFullYear()} Jose Miguel Bustamante
       </footer>
     </>
