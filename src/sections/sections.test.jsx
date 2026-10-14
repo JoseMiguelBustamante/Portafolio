@@ -197,6 +197,19 @@ describe("Contact content", () => {
     );
   });
 
+  it("shows a decorative icon in each link without changing its name", () => {
+    render(
+      <Contact
+        profile={{ links: { ...baseLinks, email: "ada@example.com" } }}
+      />,
+    );
+
+    for (const name of ["GitHub", "LinkedIn", "Correo"]) {
+      const link = screen.getByRole("link", { name });
+      expect(link.querySelector('svg[aria-hidden="true"]')).toBeInTheDocument();
+    }
+  });
+
   it("renders the email only when the profile provides it", () => {
     const { rerender } = render(<Contact profile={{ links: baseLinks }} />);
 

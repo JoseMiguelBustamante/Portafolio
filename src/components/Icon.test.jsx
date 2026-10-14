@@ -3,6 +3,12 @@ import { describe, expect, it } from "vitest";
 import Icon, { iconNames } from "./Icon.jsx";
 import Marker from "./Marker.jsx";
 
+describe("Icon catalog", () => {
+  it.each(["github", "linkedin", "file"])("includes the %s icon", (name) => {
+    expect(iconNames).toContain(name);
+  });
+});
+
 describe("Icon", () => {
   it.each(iconNames)("renders a decorative svg for %s", (name) => {
     const { container } = render(<Icon name={name} />);

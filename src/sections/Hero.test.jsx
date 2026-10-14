@@ -17,6 +17,29 @@ const baseProfile = {
   },
 };
 
+describe("Hero link icons", () => {
+  it("shows a decorative icon in each external link without changing its name", () => {
+    render(
+      <Hero
+        profile={{
+          ...baseProfile,
+          links: {
+            github: "https://github.com/ada",
+            linkedin: "https://linkedin.com/in/ada",
+            email: "ada@example.com",
+            cv: null,
+          },
+        }}
+      />,
+    );
+
+    for (const name of ["GitHub", "LinkedIn", "Correo"]) {
+      const link = screen.getByRole("link", { name });
+      expect(link.querySelector('svg[aria-hidden="true"]')).toBeInTheDocument();
+    }
+  });
+});
+
 describe("Hero", () => {
   it("renders the presentation region with the name as the page heading", () => {
     render(<Hero profile={baseProfile} />);
