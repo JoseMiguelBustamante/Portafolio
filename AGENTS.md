@@ -6,6 +6,7 @@ Personal portfolio project. Every agent working in this repository MUST use the 
 
 - Chat replies: match the user's language (the user writes in Spanish).
 - Artifacts (code, identifiers, comments, UI copy, docs, commit messages, PR descriptions): English by default, unless the user explicitly asks otherwise for a given artifact.
+- Exception: the portfolio site's visible content (UI copy, labels, project descriptions, accessibility strings) is in neutral, professional Spanish for now. Code, identifiers, comments, docs, and commits stay in English. Do not add i18n machinery until a second language is requested.
 
 ## The Gentleman stack (mandatory)
 
@@ -63,4 +64,5 @@ Personal portfolio project. Every agent working in this repository MUST use the 
 - UI: React
 - Styling: Tailwind CSS
 - Hosting / CI-CD: GitHub (`JoseMiguelBustamante`) with Netlify continuous deployment on push to `main`
-- Pending: bundler/framework (e.g. Vite vs. Next.js), language (JS vs. TypeScript), test runner (needed for Strict TDD). Record each choice here and in Engram with `mem_save` (type `decision`), with the tradeoffs considered.
+- Language: JavaScript (no TypeScript)
+- Pending: bundler/framework (recommended: Vite), test runner (needed for Strict TDD). Record each choice here and in Engram with `mem_save` (type `decision`), with the tradeoffs considered.
