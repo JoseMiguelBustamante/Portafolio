@@ -43,7 +43,9 @@ Out of scope: testimonials, blog, light theme toggle (the user asked for dark), 
 - No personal data published without the user providing it.
 
 ## Progress
-Created 2026-10-14. R1 and R2 done (committed locally, not pushed).
+Created 2026-10-14. R1 and R2 done (committed locally, not pushed). LinkedIn URL provided by the user and wired into the profile data.
+
+Content findings from the user's CV (kept out of the repo on purpose because it holds a phone number, a personal email, a home address and a birth date): the profile is Networks and Telecommunications with Linux automation, plus a Tigo software development bootcamp (Java, Spring Boot, REST/GraphQL, Docker, Redis, K6, Grafana, Graylog). The current hero role "Desarrollador de software" may not match; needs the user's decision. Do not publish the CV file or any of those personal data without explicit approval.
 
 ## Next step
 R3 "Sobre mí". Needs the user's real text; start with a short placeholder.
