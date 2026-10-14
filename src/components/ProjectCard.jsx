@@ -1,3 +1,5 @@
+import Marker from "./Marker.jsx";
+
 const linkClass =
   "font-medium text-blue-300 underline-offset-4 transition-colors hover:text-blue-200 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400";
 
@@ -6,7 +8,10 @@ export default function ProjectCard({ project }) {
 
   return (
     <article className="flex flex-col rounded-2xl border border-slate-800 bg-slate-900/40 p-6 transition-colors hover:border-slate-700">
-      <h3 className="text-lg font-semibold text-white">{title}</h3>
+      <h3 className="text-lg font-semibold text-white">
+        <Marker />
+        {title}
+      </h3>
       <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-400">
         {description}
       </p>

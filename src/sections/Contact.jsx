@@ -14,7 +14,7 @@ export default function Contact({ profile = defaultProfile }) {
   ].filter((link) => link.href);
 
   return (
-    <Section id="contacto" title="Contacto">
+    <Section id="contacto" title="Contacto" icon="mail">
       <p className="mb-8 max-w-xl text-lg leading-relaxed text-slate-300">
         Si quieres conversar sobre una oportunidad o conocer más de mi trabajo,
         puedes encontrarme aquí.

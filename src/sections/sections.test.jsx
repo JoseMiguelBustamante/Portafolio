@@ -28,6 +28,39 @@ describe.each([
   });
 });
 
+describe("Decorative bullets", () => {
+  it.each([
+    ["About", About],
+    ["Experience", Experience],
+    ["Education", Education],
+    ["Projects", Projects],
+    ["Skills", Skills],
+    ["Achievements", Achievements],
+    ["Contact", Contact],
+  ])("%s shows an icon next to its section title", (_name, Component) => {
+    render(<Component />);
+
+    const heading = screen.getByRole("heading", { level: 2 });
+    expect(heading.querySelector('svg[aria-hidden="true"]')).toBeInTheDocument();
+  });
+
+  it.each([
+    ["Projects", Projects],
+    ["Skills", Skills],
+    ["Achievements", Achievements],
+  ])("%s shows a bullet in every subtitle", (_name, Component) => {
+    render(<Component />);
+
+    const subtitles = screen.getAllByRole("heading", { level: 3 });
+    expect(subtitles.length).toBeGreaterThan(0);
+    for (const subtitle of subtitles) {
+      expect(
+        subtitle.querySelector('[aria-hidden="true"]'),
+      ).toBeInTheDocument();
+    }
+  });
+});
+
 describe("About content", () => {
   const profile = {
     about: ["Primer párrafo de prueba.", "Segundo párrafo de prueba."],

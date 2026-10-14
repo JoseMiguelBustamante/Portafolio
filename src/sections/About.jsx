@@ -5,7 +5,7 @@ export default function About({ profile = defaultProfile }) {
   const { about = [], languages = [] } = profile;
 
   return (
-    <Section id="sobre-mi" title="Sobre mí">
+    <Section id="sobre-mi" title="Sobre mí" icon="user">
       <div className="space-y-5 text-lg leading-relaxed text-slate-300">
         {about.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
