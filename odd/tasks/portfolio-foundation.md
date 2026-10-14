@@ -26,8 +26,8 @@ Out of scope for this feature: final copy, real project data, custom domain, i18
 
 ## Tasks
 - [x] T1 Scaffold Vite + React + Tailwind v4 (manual files, keep existing `.gitignore`). Check: `npm run build` passes. Evidence: build OK (vite 8.3.4, 16 modules), built CSS contains `neutral-950`.
-- [ ] T2 Add Vitest + RTL with a smoke test for `App` (observed RED, then GREEN). Check: `npm test` passes.
-- [ ] T3 Add `netlify.toml` (build `npm run build`, publish `dist`, SPA redirect). Check: file matches netlify-frameworks guide.
+- [x] T2 Add Vitest + RTL with a smoke test for `App` (observed RED, then GREEN). Check: `npm test` passes. Evidence: RED `ReferenceError: document is not defined`; GREEN after jsdom + setup file (1 test passed); build still OK. No refactor needed.
+- [x] T3 Add `netlify.toml` (build `npm run build`, publish `dist`, SPA redirect). Check: file matches netlify-frameworks guide (Vite section). Evidence: build/publish/redirect values identical to the guide; not yet validated by a real Netlify build (T6).
 - [ ] T4 Dark theme base and page layout with section skeletons: Presentation, Education, Projects, Skills, Achievements, Contact. Check: tests per section, build passes.
 - [ ] T5 Content data module (`src/data/`) with placeholder entries, sections render from data. Check: tests, build passes.
 - [ ] T6 Connect repo to Netlify (user login required) and verify the first deploy.
@@ -38,7 +38,7 @@ Out of scope for this feature: final copy, real project data, custom domain, i18
 - Pushing to `main` deploys on Netlify.
 
 ## Progress
-Started 2026-10-13. T1 done.
+Started 2026-10-13. T1, T2, T3 done (committed locally, not pushed).
 
 ## Next step
-T2.
+T4.

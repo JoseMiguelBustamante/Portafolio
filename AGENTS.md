@@ -65,4 +65,5 @@ Personal portfolio project. Every agent working in this repository MUST use the 
 - Styling: Tailwind CSS
 - Hosting / CI-CD: GitHub (`JoseMiguelBustamante`) with Netlify continuous deployment on push to `main`
 - Language: JavaScript (no TypeScript)
-- Pending: bundler/framework (recommended: Vite), test runner (needed for Strict TDD). Record each choice here and in Engram with `mem_save` (type `decision`), with the tradeoffs considered.
+- Bundler: Vite
+- Tests: Vitest + React Testing Library (`npm test`), required for Strict TDD Record each choice here and in Engram with `mem_save` (type `decision`), with the tradeoffs considered.
