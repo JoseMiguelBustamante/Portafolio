@@ -12,13 +12,15 @@ describe("App", () => {
     expect(screen.getByRole("main")).toBeInTheDocument();
   });
 
-  it("renders the six sections in order inside main", () => {
+  it("renders the eight sections in order inside main", () => {
     render(<App />);
 
     const regions = screen.getAllByRole("region");
 
     expect(regions.map((region) => region.id)).toEqual([
       "presentacion",
+      "sobre-mi",
+      "experiencia",
       "educacion",
       "proyectos",
       "habilidades",

@@ -10,7 +10,8 @@ describe("Header", () => {
     const links = within(nav).getAllByRole("link");
 
     expect(links.map((link) => [link.textContent, link.getAttribute("href")])).toEqual([
-      ["Presentación", "#presentacion"],
+      ["Sobre mí", "#sobre-mi"],
+      ["Experiencia", "#experiencia"],
       ["Educación", "#educacion"],
       ["Proyectos", "#proyectos"],
       ["Habilidades", "#habilidades"],

@@ -1,5 +1,7 @@
 import Header from "./components/Header.jsx";
 import Hero from "./sections/Hero.jsx";
+import About from "./sections/About.jsx";
+import Experience from "./sections/Experience.jsx";
 import Education from "./sections/Education.jsx";
 import Projects from "./sections/Projects.jsx";
 import Skills from "./sections/Skills.jsx";
@@ -12,6 +14,8 @@ export default function App() {
       <Header />
       <main className="mx-auto max-w-3xl px-6">
         <Hero />
+        <About />
+        <Experience />
         <Education />
         <Projects />
         <Skills />
