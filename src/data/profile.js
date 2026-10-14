@@ -3,9 +3,9 @@
 export const profile = {
   name: "Jose Miguel Bustamante",
   initials: "JM",
-  role: "Desarrollador de software",
+  role: "Desarrollador backend",
   summary:
-    "Construyo aplicaciones web y reúno aquí los proyectos que he realizado y las tecnologías que manejo.",
+    "Desarrollo servicios con Java y Spring Boot, con base en redes y telecomunicaciones. Reúno aquí los proyectos que he realizado y las tecnologías que manejo.",
   availability: "Disponible para trabajar",
   photo: null,
   links: {
