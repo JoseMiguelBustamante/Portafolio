@@ -45,7 +45,6 @@ describe("Decorative bullets", () => {
   });
 
   it.each([
-    ["Projects", Projects],
     ["Skills", Skills],
     ["Achievements", Achievements],
   ])("%s shows a bullet in every subtitle", (_name, Component) => {

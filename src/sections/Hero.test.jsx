@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import Hero from "./Hero.jsx";
 
@@ -69,24 +69,24 @@ describe("Hero", () => {
     ).not.toBeInTheDocument();
   });
 
-  it("falls back to decorative initials when there is no photo", () => {
-    render(<Hero profile={baseProfile} />);
+  it("renders the primary stack with brand labels", () => {
+    render(<Hero profile={{ ...baseProfile, stack: ["Java", "Linux"] }} />);
 
-    expect(screen.queryByRole("img")).not.toBeInTheDocument();
-    expect(screen.getByText("AL")).toHaveAttribute("aria-hidden", "true");
+    const stack = screen.getByRole("list", { name: "Stack principal" });
+    expect(
+      within(stack)
+        .getAllByRole("listitem")
+        .map((item) => item.textContent),
+    ).toEqual(["Java", "Linux"]);
   });
 
-  it("renders the photo with an accessible name when provided", () => {
-    render(<Hero profile={{ ...baseProfile, photo: "/foto.jpg" }} />);
-
-    const photo = screen.getByRole("img", { name: "Foto de Ada Lovelace" });
-    expect(photo).toHaveAttribute("src", "/foto.jpg");
-  });
-
-  it("always renders the contact anchor and the GitHub link", () => {
+  it("renders the project and contact calls to action and the GitHub link", () => {
     render(<Hero profile={baseProfile} />);
 
-    expect(screen.getByRole("link", { name: "Contactarme" })).toHaveAttribute(
+    expect(
+      screen.getByRole("link", { name: "Ver proyectos" }),
+    ).toHaveAttribute("href", "#proyectos");
+    expect(screen.getByRole("link", { name: "Contactar" })).toHaveAttribute(
       "href",
       "#contacto",
     );

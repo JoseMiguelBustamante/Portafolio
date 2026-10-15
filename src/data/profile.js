@@ -8,6 +8,8 @@ export const profile = {
   summary:
     "Desarrollo servicios con Java y Spring Boot, con base en redes y telecomunicaciones. Reúno aquí los proyectos que he realizado y las tecnologías que manejo.",
   availability: "Disponible para trabajar",
+  // Primary stack highlighted next to the hero headline.
+  stack: ["Java", "Spring Boot", "Linux"],
   photo: null,
   about: [
     "Soy egresado en Redes y Telecomunicaciones, con enfoque en la administración y automatización de servidores Linux. Hoy desarrollo servicios backend con Java y Spring Boot.",

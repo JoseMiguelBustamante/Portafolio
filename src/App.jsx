@@ -12,7 +12,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <main className="mx-auto max-w-3xl px-6">
+      <main className="mx-auto max-w-5xl px-6">
         <Hero />
         <About />
         <Experience />
@@ -22,7 +22,7 @@ export default function App() {
         <Achievements />
         <Contact />
       </main>
-      <footer className="mx-auto max-w-3xl px-6 py-10 text-sm text-slate-600">
+      <footer className="mx-auto max-w-5xl px-6 py-10 text-sm text-slate-600">
         © {new Date().getFullYear()} Jose Miguel Bustamante
       </footer>
     </>
